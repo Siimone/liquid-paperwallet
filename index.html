@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Liquid Sidechain PaperWallet</title>
+  <meta name="title" content="Bitcoin Liquid PaperWallet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Generate secure paper wallets for the Liquid Bitcoin sidechain with our easy-to-use tool. Safely store your Liquid Bitcoin offline with high security and privacy. Perfect for long-term storage and secure transactions.">
+  <!-- open meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://siimone.github.io/liquid-paperwallet" />
+  <meta property="og:title" content="Bitcoin Liquid PaperWallet" />
+  <meta property="og:description"
+    content="Generate secure paper wallets for the Liquid Bitcoin sidechain with our easy-to-use tool. Safely store your Liquid Bitcoin offline with high security and privacy. Perfect for long-term storage and secure transactions." />
+  <meta property="og:image" content="https://siimone.github.io/liquid-paperwallet/images/liquid-paperwallet.jpg" />
+  <!-- twitter meta -->
+  <meta name="twitter:title" content="Bitcoin Liquid PaperWallet">
+  <meta name="twitter:description"
+    content="Generate secure paper wallets for the Liquid Bitcoin sidechain with our easy-to-use tool. Safely store your Liquid Bitcoin offline with high security and privacy. Perfect for long-term storage and secure transactions.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://siimone.github.io/liquid-paperwallet/images/liquid-paperwallet.jpg">
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="/favicon/liquid_favicon_32x32.png">
+  <link rel="shortcut icon" type="image/png" sizes="any" href="/favicon/liquid_favicon_32x32.png">
+  <link rel="shortcut icon" type="image/png" sizes="128x128" href="/favicon/liquid_favicon_128x128.png">
+  <link rel="apple-touch-icon" type="image/png" href="/favicon/liquid_favicon_180x180.png">
+  <link rel="shortcut icon" type="image/png" sizes="192x192" href="/favicon/liquid_favicon_192x192.png">
+  <!-- qrcode lib -->
+  <script src="/js/qrcode.min.js"></script>
+  <script src="/js/jquery-3.3.1.slim.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <!-- styles -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="/css/style.css" rel="stylesheet">
+
+  <script type="module">
+    import 'buffer-es'
+    globalThis.Buffer = Buffer
+  </script>
+</head>
+
+<body>
+  <div class="container-fluid p-0 overflow-hidden">
+
+    <nav class="container navbar navbar-expand-lg navbar-dark bg-dark mt-4">
+      <a class="navbar-brand" href="#">Liquid Paper Wallet</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#why">Why</a>
+          </li>
+          <li class="nav-item ">
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#generate-wallet">Generate</a>
+          </li>
+          <li class="nav-item ">
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#restore">How to restore</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#support">Support us!</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="section mt-5">
+      <div class="content">
+        <div class="row">
+          <div class="col-12 col-md-6 px-5">
+            <img src="/svg/liquid.svg" class="img-fluid p-5" />
+
+            <h2 class="font-weight-light text-white title pt-5">Your Liquid Bitcoin, your wallet: Generate a secure
+              paper
+              wallet
+              now.
+            </h2>
+            <a class="btn btn-primary mt-5" href="#generate-wallet">
+              Generate new wallet <img width="25" src="/svg/down-arrow.svg">
+            </a>
+          </div>
+          <div class="col-12 col-md-6 p-5">
+            <img class="img-fluid" src="/svg/bubble.svg">
+            <img id="btc-logo" class="img-fluid" src="/images/liquid-paperwallet-image-1.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section bg-white mb-0 py-5" id="why">
+      <div class="content">
+        <div class="row ">
+          <div class="col-12 p-5">
+            <h2 class="font-weight-light text-dark title text-center">Why a Paper Wallet?</h2>
+            <p class="text-center text">
+              Paper wallets are a secure and efficient method to store Bitcoin on the Liquid Network offline.
+              You can store or gift BTC seamlessly without ever needing an internet connection by treating these
+              wallets like physical cash.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section bg-gray mt-0 mb-0">
+      <div class="content">
+        <div class="row">
+          <div class="col-12 col-md-4 p-5">
+            <img class="mb-2" src="/svg/check.svg">
+            <h2 class="py-2 text-dark title text-start">Cost-Effective Gifting</h2>
+            <p class="text-start text-2">
+              Paper wallets provide a simple and cost-effective way to gift l-sats (Liquid sats). They enable future
+              transactions to be conducted at a lower cost, making them a great option for introducing friends and
+              family to the world of Bitcoin and Liquid assets.
+            </p>
+          </div>
+          <div class="col-12 col-md-4 p-5">
+            <img class="mb-2" src="/svg/check.svg">
+            <h2 class="py-2 text-dark title text-start">Secure Asset Storage</h2>
+            <p class="text-start text-2">
+              With a paper wallet, you can securely store various assets, including L-BTC and L-USDt (Tether). This
+              offline storage method protects your assets from online threats such as hacking, phishing, and malware,
+              ensuring peace of mind.
+            </p>
+          </div>
+          <div class="col-12 col-md-4 p-5">
+            <img class="mb-2" src="/svg/check.svg">
+            <h2 class="py-2 text-dark title text-start">Long-Term Security</h2>
+            <p class="text-start text-2">
+              Paper wallets are immune to hardware failures, software corruption, and other technical issues that can
+              affect digital wallets. As long as the physical paper is kept safe, your assets remain secure.
+            </p>
+          </div>
+          <div class="col-12 col-md-12 p-5">
+            <h2 class="py-2 text-dark title text-start">and.. Easy to create and use!</h2>
+            <p class="text-start text-2">
+              Creating a paper wallet is straightforward and doesn't require advanced technical knowledge. Simply print
+              the wallet and use the mnemonic phrase to import it into a compatible digital wallet when needed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="generate-wallet">
+      <div class="content">
+
+        <div class="row justify-content-center">
+
+          <div class="col-12 col-md-12 p-5">
+            <h1 class="font-weight-light text-white title">
+              Are you ready?
+            </h1>
+            <ol>
+              <li class="text-white h4 py-2">Disconnect your device from the internet.</li>
+              <li class="text-white h4 py-2">Click "Generate New Wallet."</li>
+              <li class="text-white h4 py-2">Print your wallet and delete it from your device (including the recycle bin).</li>
+              <li class="text-white h4 py-2">Gift some sats to someone you love!</li>
+            </ol>            
+          </div>
+          <div class="col-12 col-md-12 text-center">
+            <button class="btn btn-primary px-5 py-3" id="generate">
+              <span class="h4">
+                <img width="25" src="/svg/wallet.svg" class="mr-2"> Generate new wallet
+              </span>
+            </button>
+          </div>
+          <div class="col-12 col-md-6">
+            <p class="small text-white pt-2 px-5">
+              <strong>Warning:</strong> This website is in beta and has not been fully tested. Use at your own risk. Ensure you understand the security implications before generating a paper wallet.
+            </p>
+          </div>
+
+            <div class="col-md-10 col-11  mt-5 text-center mx-auto">
+              <button class='btn btn-primary mt-0' id="download">
+                <div style="width: 20px; display: inline-block;">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#fff"
+                    viewBox="0 0 512 512">
+                    <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
+                  </svg>
+                </div>
+                Download
+              </button>
+              <div id='canvas-container' class="text-center"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section bg-white pt-5 mt-0" id="restore">
+      <div class="content">
+        <h2 class="font-weight-light text-dark title text-center">How to restore a Liquid PaperWallet?</h2>
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <p class="text-2 p-4">
+              You will find a mnemonic phrase printed on your Liquid PaperWallet. Simply import it into your favorite
+              wallet to spend your l-sats! Below are two wallets that support our PaperWallets.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-4 p-5">
+            <img src="/images/green-wallet.png" class="img-fluid rounded-lg">
+            <h3 class="py-2 text-dark title text-start">
+              <a href="https://blockstream.com/green/" class="text-dark text-decoration-underline" target="_blank">
+                <u>
+                  Green Wallet
+                </u>
+              </a>
+            </h3>
+            <p class="text-start text-2">
+              Blockstream Green is an industry-leading Bitcoin wallet that offers you an unrivaled blend of security and
+              ease-of-use.
+              Blockstream Green is an open source, multi-platform Bitcoin wallet. Download now for iOS, Android or
+              Desktop.
+            </p>
+          </div>
+          <div class="col-12 col-md-4 p-5">
+            <img src="/images/marina-wallet.jpg" class="img-fluid rounded-lg">
+            <h3 class="py-2 text-dark title text-start">
+              <a href="https://vulpem.com/marina.html" target="_blank" class="text-dark">
+                <u>
+                  Marina
+                </u>
+              </a>
+            </h3>
+            <p class="text-start text-2">
+              Marina is the ultimate gateway designed to access the Liquid Network directly from your browser. Receive
+              and
+              send Liquid Bitcoin, Tether and other Liquid assets. Marina is a Browser Extension supported by Google
+              Chrome and Mozilla Firefox.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="section bg-black mb-0 mt-0" id="support">
+      <div class="content">
+        <h2 class="font-weight-light text-white title text-center">Support us!</h2>
+        <div class="row text-center justify-content-center">
+          <div class="col-10 col-md-4">
+            <p class="text-white h3 py-2">with liquid</p>
+            <a
+              href="liquidnetwork:lq1qqtjl8a63zzknupqsek5ep6nwz5zh20e3r3e4kp2fx0f5ceasdmqj8mzqp6vmdjdjyulgv57zje8s44hc7qahz9tgkey4yn0fr">
+              <img src="/images/support-liquid.png" class="img-fluid rounded-lg" />
+            </a>
+          </div>
+          <div class="col-10 col-md-4">
+            <p class="text-white h3 py-2">with lightning</p>
+            <a
+              href="lightning:lnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h82unvwqhhxam9v468gmmhv4eryvglp93nt">
+              <img src="/images/support-lightning.jpg" class="img-fluid rounded-lg" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section bg-white mb-0">
+      <div class="content">
+        <div class="row">
+          <div class="col-12 col-md-7 p-5">
+            <h2 class="py-2 text-dark title text-start">Open Source ❤️</h2>
+            <p class="text-start text-2">
+              This project is completely open source and is licensed under the GNU GPL. You can find the repository on
+              GitHub <a href="https://github.com/Siimone/liquid-paperwallet" target="_blank">here</a>
+            </p>
+            <h2 class="py-2 text-dark title text-start">Why Liquid?</h2>
+            <p class="text-start text-2">
+              The Liquid Network is a Bitcoin sidechain enabling the fast, confidential settlement and issuance
+              of digital assets, such as stablecoins, security tokens, and other financial instruments, on top of the
+              Bitcoin timechain.
+            </p>
+          </div>
+          <div class="col-12 col-md-5 p-5">
+            <p class="py-2 text-dark font-weight-bold title text-start">PARTNERS</p>
+            <p class="text-start text-2"><a href="https://x.com/DaReSimone" target="_blank"
+                class="text-dark">@DareSimone
+                - Developer</a></p>
+            <p class="text-start text-2"><a href="https://x.com/sheratoshi" target="_blank"
+                class="text-dark">@sheratoshi
+                - Designer</a></p>
+            <p class="text-start text-2"><a href="https://x.com/BcademyIT" target="_blank" class="text-dark">@bcademy -
+                Liquid Federation Member</a></p>
+            <p class="text-start text-2"><a href="https://x.com/vulpemventures" target="_blank"
+                class="text-dark">@VulpemsVentures - Consultant</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.ts"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+#myCanvas {
+  max-width: 100%;
+  /* display: none */
+}
+
+#download-area {
+  display: none;
+}
+
+.navbar-brand {
+  border: 3px solid white;
+  padding: 12px 10px 12px 10px;
+  border-radius: 4px;
+}
+
+body {
+  background-color: #171717 !important;
+}
+
+.container, .bg-dark {
+  background-color: #171717 !important;
+}
+
+.section {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+#btc-logo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:hover,
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: #46beae;
+  border-color: #46beae;
+  border-radius: 4px;
+  padding: 12px 22px 12px 22px;
+}
+
+.title {
+  line-height: 48px;
+}
+
+.text {
+  line-height: 32px;
+  font-size: 18px;
+  color: #757575;
+}
+
+.text-2 {
+  line-height: 28px;
+  color: #757575;
+  font-size: 16px;
+}
+
+.bg-gray {
+  background-color: #F5F5F5;
+}
+
+hr {
+  background-color: #E0E0E0;
+  height: 1px;
+  width: 90%;
+}
+
+@media (min-width: 1200px) {
+  .content {
+      max-width: 1140px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+#download {
+  width: 300px;
+  font-size: 1.2rem;
+  display: none;
+}
+
+#paperwallet-canvas {
+  max-width: 100%;
+  width: 100%;
+}
